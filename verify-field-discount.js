@@ -15,7 +15,7 @@ function validation() {
     if (containsSymbol && discount > 10) return ZDK.Client.showAlert("O valor que você quer dar de desconto é maior do que 10% do produto");//if contains the symbol and the value is greater than 10, return error
     if (!value) return ZDK.Client.showAlert("O valor do produto não foi inserido para a realização do cálculo do desconto!");//Verify if the price was sent
 
-    let allowedValue = (10 * value) / 100;//do the calculation and get the result
+    let allowedValue = (10*value) / 100;//do the calculation and get the result
 
     if (discount > allowedValue) {
         ZDK.UI.freeze(true)
